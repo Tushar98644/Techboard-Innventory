@@ -145,7 +145,7 @@
                               <input class="online_book" type="time">
                            </div>
                            <div class="col-md-12">
-                              <button onclick="clickme()" class="book_btn" >Book Now</button>
+                              <button onclick="clickme()" class="book_btn">Book Now</button>
                            </div>
                         </div>
                      </form>
@@ -174,17 +174,19 @@
             <div class="col-md-6">
                <form id="request" class="main_form">
                   <div class="row">
-                     <div class="col-md-12 ">
-                        <input class="contactus" placeholder="Name" type="type" name="Name">
+                     <div class="col-md-12">
+                        <input class="contactus" placeholder="Name" type="text" name="Name" required id="name">
                      </div>
                      <div class="col-md-12">
-                        <input class="contactus" placeholder="Email" type="type" name="Email">
+                        <input class="contactus" placeholder="Email" type="email" name="Email" required id="email">
                      </div>
                      <div class="col-md-12">
-                        <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
+                        <input class="contactus" placeholder="Phone Number" type="number" name="Phone Number" required
+                           id="phone">
                      </div>
                      <div class="col-md-12">
-                        <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                        <textarea class="textarea" placeholder="Message" type="text" Message="Name" requierd
+                           id="msg"></textarea>
 
                      </div>
                      <div class="col-md-12">
@@ -235,8 +237,8 @@
                <div class="col-md-4">
                   <h3>News letter</h3>
                   <form class="bottom_form">
-                     <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                     <button class="sub_btn">subscribe</button>
+                     <input class="enter" placeholder="Enter your email" type="text" name="Enter your email" >
+                     <button onclick="pressed()" class="sub_btn">subscribe</button>
                   </form>
                   <ul class="social_icon">
                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -262,19 +264,33 @@
 
 
 
-      function onpress() {
-         alert("your message has been delievered!");
+      function onpress () {
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var phone = document.getElementById("phone");
+            var msg = document.getElementById("msg");
 
+         if (name.value !== '' && email.value !== '' && phone.value !== '' && msg.value !== '') { alert("your message has been delievered!");
+         
+      
+      }
 
+         // else if(name.value == '' && email.value == '' && phone.value == '' && msg.value == ''){
+         //    alert("please enter value");
+         // }
+         
+         function clickme() {
 
+            alert("you have successfully booked a room!")
+
+         }
+         function pressed(){
+            alert("yes");
+         }
 
       }
-   </script>
-   <script>
-      function clickme() {
-         alert("you have successfully booked a room!")
+   
 
-      }
    </script>
 
 
