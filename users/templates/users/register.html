@@ -1,0 +1,63 @@
+
+{% load crispy_forms_tags %}
+
+
+<html>
+    <head>
+        <title></title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <style>
+            body{
+                background-color: #DEF5E5;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+
+
+    <div class="">
+        <div style="margin: auto;
+        margin-top: 7rem;
+        font-family: 'Montserrat', sans-serif;
+        width: 60%;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        
+        padding: 10px;">
+            <form method="POST" class="loginfrm" >
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Join Today</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group" style="margin: auto;
+                
+                font-family: 'Montserrat', sans-serif;
+                width: 25%;
+                
+                border-radius: 20px;
+                
+                padding: 10px;">
+                    <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                </div>
+            </form>
+
+        </div>
+        
+        <div class="border-top pt-3" style="margin: auto;
+        width: 25%;font-family: 'Montserrat', sans-serif;">
+            <small class="text-muted" >
+                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+            </small>
+        </div>
+    </div>
+
+
+
+    
+        
+    </body>
+</html>
