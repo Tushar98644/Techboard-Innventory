@@ -1,0 +1,404 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        page 3
+    </title>
+    <style>
+        .log {
+            background: linear-gradient(#e66465, #9198e5);
+            ;
+            
+            
+            width: 310px;
+            padding-left: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding-bottom: 10px;
+            padding-top: 30px;
+            box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+        }
+
+        .userlog {
+            margin-left: 800px;
+            margin-top: 0px;
+            background-color: white;
+            width: 330px;
+            padding-bottom: 50px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+
+        }
+
+        .input {
+
+            padding-left: 100px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 180px;
+        }
+
+        .password {
+            padding-left: 70px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 210px;
+        }
+
+        .login-main {
+            margin-left: 55px;
+            margin-top: 45px;
+        }
+
+        .login {
+            padding-left: 100px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-color: orangered;
+            width: 140px;
+            margin-left: -10px;
+
+        }
+
+        .alc {
+            width: 40px;
+            height: 40px;
+            margin-top: -200px;
+            margin-left: 10px;
+        }
+
+        .alcher {
+            margin-left: 60px;
+            padding-top: -20px;
+            font-size: 40px;
+            margin-top: -250px;
+        }
+
+        .alcheringa {
+            opacity: 0.4;
+        }
+
+        .image {
+            margin-top: -225px;
+        }
+
+        .post {
+            margin-top: -120px;
+            margin-bottom: 100px;
+        }
+
+        .image-2 {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+
+
+
+        }
+
+        .new-post {
+            margin-left: 800px;
+            margin-top: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            width: 285px;
+            padding-right: 50px;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            box-shadow: 2px 2px 2px 2px rgba(27, 23, 23, 0.28);
+            margin-bottom: 200px;
+        }
+
+        .image-3 {
+            width: 50px;
+            height: 50px;
+            vertical-align: top;
+            margin-left: -50px;
+            margin-top: -10px;
+
+        }
+
+        .image-4 {
+            width: 50px;
+            height: 50px;
+            vertical-align: text-top;
+            margin-left: -50px;
+            margin-top: -10px;
+
+        }
+
+        .image-5 {
+            width: 50px;
+            height: 50px;
+            margin-left: 30px;
+            margin-top: -10px;
+            vertical-align: top;
+
+        }
+
+        .sub {
+            width: 400px;
+            height: 640px;
+            display: inline-block;
+            margin-top: -50px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px 2px rgba(27, 23, 23, 0.28);
+
+        }
+
+        .upload {
+            width: 300px;
+            height: 200px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px rgba(27, 23, 23, 0.28);
+
+
+
+        }
+
+        .caption {
+            width: 300px;
+            height: 70px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px rgba(27, 23, 23, 0.28);
+
+        }
+
+        .login-2 {
+            width: 400px;
+            height: 50px;
+            margin-top: 60px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            border-color: orange;
+            background-color: white;
+
+        }
+
+        .text:hover {
+
+            border-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div style="display: grid;margin-top: 300px;margin-left: 180px;">
+
+        <div class="image">
+            <img class="alc" src="{% static '3f89ce49-f9c8-4f4d-a65b-6c7a8f41c822.png' %}">
+        </div>
+        <div class="alcher">
+
+            
+            <span class="alcheringa">Alcheringa</span> <span style="color: rgb(255, 89, 0);">Connect</span>
+        </div>
+        <div class="post" style="font-size: 20px;width: 320px; padding-left: 50px;font-size: 30px;">
+            create a new post
+        </div>
+        <div class="sub">
+            <div style="margin-left: 50px;margin-top:30px;">
+                image
+            </div>
+
+            <div class="upload" style="margin-left: 45px;margin-top: 20px;padding-bottom: 20px;">
+                <div>
+
+                    <img id="30" src="" alt="" style=" width:300px;height:220px;overflow: hidden;margin-top: 0px;border-radius: 6px; display: none;">
+                    <div id="dummy-div" style="width:300px;height:220px"></div>
+                </div>
+
+                <div style="padding-top:140px;padding-left:80px;opacity: 0.4;margin-top: -100px;">
+                    <div id="31" style="margin-top:-160px;padding-top: 10px;">uplaod an image</div>
+                </div>
+
+                <div>
+                    <input id="super" type="file" placeholder="uplaod an image" hidden>
+
+
+                    <button onclick="active()" id="26" style="padding-top: 0px;width: 300px;height: 43px;margin-top: 280px;text-align: center;border-radius: 5px;
+                    box-shadow: 1px 1px 1px 1px #f8f5f5e0;border-color: rgb(195, 178, 178);margin-top: -60px;">
+                        <p style="text-transform:uppercase ;width: max-content;margin-left: 85px;">choose file
+                        </p>
+                    </button>
+                </div>
+
+            </div>
+            <div style="margin-left: 50px;margin-top:100px;">
+                caption
+            </div>
+            <div style="margin-left: 45px;margin-top: 20px;">
+                <input class="text" style="width: 291px;
+                   height: 65px;
+                   border-radius: 5px;
+                   box-shadow: 1px 1px 1px 1px rgba(27, 23, 23, 0.28);
+                   opacity: 1;border-color: aliceblue;text-align: center;" class="login" type="text"
+                    placeholder="give an image caption">
+            </div>
+            <button id="50"
+                style="margin-top: 45px;margin-left:43px;width:300px;height:70px;border-color:rgb(227, 28, 28);border-radius: 10px;background-color: white;font-size: 20px;">click
+                to get loaction</button>
+        </div>
+        <div style="padding-bottom:400px;">
+            <button id="25" class="login-2" style="margin-top: 35px;color: orange;">share</button>
+        </div>
+
+    </div>
+    <div class="log" style="margin-left: 800px ;margin-top:-1150px;padding-bottom: 60px;">
+        <div style="color: white;padding-top: 40px;font-size: 25px;">
+        
+            MY PROFILE
+
+        
+        </div>
+    </div>
+    <div class="userlog">
+        <div style="font-size:20px;padding-top: 30px;padding-left: 40px;margin-left: 70px;opacity: 0.6;margin-bottom: -10px;">
+          <div style="margin-bottom: -25px;">
+            {{user.username}}
+          </div> 
+        </div>
+        <div >
+            <img style="width: 20px;margin-left: 90px;margin-bottom: -35px;" src="https://www.pngkey.com/png/detail/417-4174990_how-to-set-use-small-green-dot-icon.png">
+        </div>
+        <div style="margin-left: 110px;font-size: 20px;margin-top: 10px;opacity: 0.4;">
+           Active
+        </div>
+        <div style="margin-top: -60px;margin-left: 20px;">
+            <img class="image-2" src="{% static 'Screenshot 2022-08-06 at 10.55.48 AM.png' %}">
+        </div>
+        <div style="margin-left:18px;margin-top: 60px;width: 310px;">
+            lorem ipsusm dolor sit amer consectuctor aidipscing elit.Donac vitae rhonscus s quis.Morbi facilisis ante
+            sed maximus rhoncus
+        </div>
+        <div style="margin-top: 70px;padding-left:90px;opacity: 0.6;font-size: 20px;">
+            <img class="image-4" src="{% static 'create.webp' %}"><a  style="text-decoration: none"  href="/project"> My posts</a>
+               
+           
+
+        </div>
+        <div style="margin-top: 15px;padding-left:90px;opacity: 0.6;font-size: 20px;">
+            <img class="image-3" src="{% static 'save.webp' %}"><a  style="text-decoration: none"  href="webops2">saved posts</a> 
+        </div>
+    </div>
+    <div class="new-post">
+        <img class="image-5" src="{% static 'create.webp' %}">
+        <span style="padding-left:10px ;font-size:20px;padding-top: 20px;">create a new post</span>
+    </div>
+    <div style="margin-top:-240px ;">
+        <button style="margin-left:800px; width: 335px;
+        height: 50px;
+        margin-top: 60px;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        border-color: orange;
+        background-color: white; ">
+           <a  style="text-decoration: none" href="/">Signout</a> 
+        </button>
+    </div>
+    <!-- <script src="{% static 'project2.js' %}"></script> -->
+    <script>
+        const display = document.getElementById("50");
+
+display.addEventListener("click", () => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(onsuccess, onerror);
+    }
+    else {
+        display.innertext = "your browser does not support ";
+    }
+
+});
+
+
+
+function onsuccess(position) {
+
+    let{latitude,longitude }=position.coords;
+    console.log(latitude,longitude);
+
+    fetch(`https://us1.locationiq.com/v1/reverse?key=pk.78b5f16a7068c2f5712364cf784435c5&lat=${latitude}&lon=${longitude}&format=json`)
+    .then(res => {
+        return res.json();
+    })
+    .then(data => {
+       display.innerHTML=`${data.address.county},${data.address.state}, ${data.address.postcode} `;
+    })
+
+    
+}
+
+
+
+
+
+function onerror(error) {
+    if (error.code == 1) {
+        display.innertext = "you denied the request";
+
+    }
+    else if (error.code == 2) {
+        display.innertext = "location not available";
+
+    }
+    else {
+        display.innertext = "something went wrong ";
+
+    }
+   
+
+
+
+}
+    </script>
+    <script>
+        const uploadimage = document.getElementById("26");
+        const divimage = document.getElementById("super");
+        const img = document.getElementById("30");
+        const hide=document.getElementById("31");
+        const dummy_div=document.getElementById("dummy-div");
+        
+        function active() {
+            divimage.click();
+            hide.innerText="";
+        }
+        
+
+
+
+
+
+
+        divimage.addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const result = reader.result;
+                    img.style.display = "block";
+                    dummy_div.style.display = "none";
+                    img.src = result;
+                }
+                reader.readAsDataURL(file);
+            }
+
+        })
+
+    </script>
+    
+
+    
+
+</body>
+
+</html>

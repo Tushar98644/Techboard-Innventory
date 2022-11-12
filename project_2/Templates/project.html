@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Alcher Connect
+    </title>
+    <style>
+        .main-1 {
+            background-color: white;
+            border-radius: 10px;
+            border-right: 0px;
+            border: 20px;
+            width: 300px;
+            height: 230px;
+            box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+
+        }
+
+        .main-2 {
+            background-color: white;
+            border-radius: 10px;
+            border-right: 0px;
+            border: 20px;
+            width: 300px;
+            height: 230px;
+            margin-left: -100px;
+            box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+
+        }
+
+        .main-3 {
+            background-color:white;
+            border-radius: 10px;
+            border-right: 0px;
+            border: 20px;
+            width: 300px;
+            height: 230px;
+            margin-left: -100px;
+            box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+        }
+
+        .main-4 {
+            margin-left: 200px;
+            margin-top: 70px;
+            background-color: white;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+        }
+
+        .main-5 {
+            margin-top: 70px;
+            margin-left: 200px;
+            background-color: white;
+            border-radius: 10px;
+            width: 300px;   
+        box-shadow: 2px 2px 2px 2px rgba(52, 48, 48, 0.272);
+
+
+        }
+
+        .alcher {
+            margin-left: 10px;
+            padding-top: 120px;
+            font-size: 40px;
+        }
+        .alc{
+            width: 40px;
+            height:40px;
+            margin-top: 120px;
+            margin-left:170px;
+        }
+        .alcheringa 
+        {
+            opacity: 0.4;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="margin-top: -100px;">
+        <div style="display: flex;grid-template-columns: auto;">
+            <div>
+    <img class="alc" src="{% static '3f89ce49-f9c8-4f4d-a65b-6c7a8f41c822.png'%}">
+            </div>
+            <div class="alcher">
+    
+               <span class="alcheringa">Alcheringa</span>  <span style="color: rgb(255, 89, 0);">Connect</span>
+            </div>
+        </div>
+    
+        <div style="display: grid;grid-template-columns: 1200px 400px ;margin-top:120px">
+            <div style="margin-left: 210px;margin-bottom:40px;font-size: 29px;">
+                <b>MY POSTS</b>
+            </div>
+            
+        </div>
+    
+
+
+        {% for post in posts %}
+        <div style="display: grid; grid-template-columns: 500px 400px 400px; margin-top: 0px; margin-left: 200px;">
+            <div class="main-1" >
+                <div>
+                    <img src="{% static 'Screenshot 2022-08-06 at 10.55.48 AM.png'%}"
+                        style="width: 300px; height: 200px; border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                </div>
+                <div style="display: grid;grid-template-columns: 40px 100px;">
+                    <div style="margin-left: 20px;">
+                        👍
+                    </div>
+                    <div>
+                        {{post.likes}}
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            
+
+    
+        </div>
+       {% endfor %}
+    </div>
+    
+</body>
+
+</html>
